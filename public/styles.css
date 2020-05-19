@@ -62,6 +62,36 @@ header > section p > a {
     transition: background-size .2s;
 }
 
+#svg1 {
+    position: absolute;
+    margin-top: 5em;
+    margin-left: -13em;
+    /* top: 0;
+    margin-left: -25em; */
+}
+
+#svg2 {
+    position: absolute;
+    margin-top: 5em;
+    right: -10em;
+}
+
+header svg > rect {
+    stroke: var(--yellow);
+    stroke-dasharray: 30;
+}
+
+header:hover svg > rect {
+    stroke: var(--yellow);
+    animation: dash 1s linear infinite;
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 120;
+    }
+}
+
 main > section {
     display: flex;
     flex-wrap: wrap;
