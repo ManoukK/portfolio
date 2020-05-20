@@ -21,18 +21,11 @@
     background-color: var(--peach);
 }
 
-/* ::-webkit-scrollbar-track:hover {
-    background-color: var(--brown);
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--peach);
-} */
-
 body {
     background-color: var(--pink);
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 header > section {
@@ -48,18 +41,9 @@ header > section h1 {
     text-align: center;
 }
 
-header > section p > a {
-    text-decoration: none;
-    color: black;
-    background:
-        linear-gradient(
-        to bottom, var(--peach) 0%,
-        var(--peach) 100%
-        );
-    background-position: 0 100%;
-    background-repeat: repeat-x;
-    background-size: 4px 4px;
-    transition: background-size .2s;
+header > section p {
+    max-width: 25em;
+    margin: 0 auto;
 }
 
 #svg1 {
@@ -92,16 +76,33 @@ header:hover svg > rect {
     }
 }
 
+header section > article {
+    background-color: var(--white);
+    box-shadow: none;
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    padding: 0.5em;
+}
+
+
+article > a {
+    margin: 0.5em auto;
+    padding: 0.8em;
+}
+
+
 main > section {
     display: flex;
     flex-wrap: wrap;
+    padding: 0em 1em;
 }
 
 article {
     position: relative;
-    /* margin: 1em; */
     margin: 2em auto;
-    width: 20em;
+    width: 30em;
     background-color: var(--white);
     padding: 1em;
     display: inline-block;
@@ -117,19 +118,41 @@ article h2 {
     font-family: "Arial Black", Gadget, sans-serif;
     text-align: center;
     color: var(--peach);
+    width: 80%;
+    margin: 1em auto 0em auto;
+    height: 3em;
 }
 
 article p {
-    margin-bottom: 4em;
+    width: 80%;
+    margin: 1em auto 3em auto;
 }
 
-article > a {
+/* main section article > a {
     position: absolute;
     bottom: 0;
     right: 0;
     margin: 0em 1em 1em 0em;
     padding: 1em;
+} */
+
+div {
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0em auto;
+}
+
+div > a {
+    padding: 1em;
+}
+
+a {
+    position: relative;
+    margin: 0em auto;
+    display: inline-block;
     text-decoration: none;
+
     color: black;
     /* code from: https://css-tricks.com/having-fun-with-link-hover-effects/ */
     background:
