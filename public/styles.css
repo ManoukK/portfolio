@@ -1,40 +1,93 @@
 :root{
-    --yellow: #f5b257;
+    /* --yellow: #f5b257;
     --pink: #Fccbbb;
     --peach: #e37957;
     --brown: #dba686;
+    --white: white; */
+
+    --green: #98b08b;
+    --lightGreen: #d8deba;
+    --darkGreen: #3c6654;
+    --softSoftPink: #ffdfdf;
+    /* --pink: #feb9b7; */
+    --softPink: #dba686;
+    --pink: #e37957;
     --white: white;
+
+    --blue: lightblue; 
 }
 
 ::-webkit-scrollbar {
-    width: 15px;
+    width: 25px;
   }
 
 ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 50px;
-    background-color: var(--brown);
+    /* aanpassen */
+    background-color: var(--white);
+    background-image: url("/images/cutLine.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 50px;
-    background-color: var(--peach);
+    /* aanpassen */
+    /* background-color: var(--darkGreen); */
+    background-image: url("/images/scissor.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 body {
-    background-color: var(--pink);
+    background-image: url(/images/papertexture2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* aanpassen */
+    /* background-color: var(--softSoftPink); */
+    background-color: #d1f0e5;
+    /* background-color: #e3c6a8; */
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+}
+
+header {
     overflow-x: hidden;
+    position: relative;
 }
 
 header > section {
-    background-color: var(--yellow);
+    position: relative;
     width: 50%;
-    margin: 2em auto 0 auto;
+    height: auto;
+    margin: 5em auto;
     padding: 0.5em;
-    border-radius: 50px;
     color: black;
+    /* background-color: #f8dce8; */
+    background-color: #fbecc6;
+}
+
+header > section > img {
+    position: absolute;
+    width: 8em;
+
+}
+
+header > section > img:first-of-type {
+    top: -2em;
+    left: -3em;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+}
+
+header > section > img:last-of-type {
+    top: -2em;
+    right: -3em;
 }
 
 header > section h1 {
@@ -48,7 +101,8 @@ header > section p {
 
 header svg {
     position: absolute;
-    margin-top: 7em;
+    margin-top: 9em;
+    z-index: -1;
 }
 
 #svg1 {
@@ -60,12 +114,13 @@ header svg {
 }
 
 header svg > rect {
-    stroke: var(--yellow);
+    /* aanpassen */
+    stroke: var(--darkGreen);
     stroke-dasharray: 30;
 }
 
 header:hover svg > rect {
-    stroke: var(--yellow);
+    stroke: var(--darkGreen);
     animation: dash 1s linear infinite;
 }
 
@@ -76,7 +131,8 @@ header:hover svg > rect {
 }
 
 header section > article {
-    background-color: var(--white);
+    /* position: relative; */
+    background-color: transparent;
     box-shadow: none;
     width: 85%;
     display: flex;
@@ -85,38 +141,100 @@ header section > article {
     padding: 0.5em;
 }
 
-
-article > a {
+article span {
+    background-image: url(/images/pinkWashiTape.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     margin: 0.5em auto;
-    padding: 0.8em;
+    padding: 1em;
+    text-align: center;
+    width: 5em;
+    display: inline;
 }
 
+article a {
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    z-index: 3;
+}
+
+article span svg {
+    position: absolute;
+    z-index: 1;
+    fill: none;
+    margin: -5em 0em 0em -12em;
+    /* aanpassen (geen scale gebruiken) */
+    transform: scale(0.5);
+}
+
+/* article span:first-of-type svg {
+    margin: -5em 0em 0em -12em;
+}
+
+article span:nth-of-type(2) svg {
+    margin: -5em 0em 0em -12em;
+} */
+
+article svg path {
+    opacity: 0;
+}
+
+article a:hover + svg path{
+    opacity: 1;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 1s ease-in forwards;
+}
+
+@keyframes dash {
+    to {
+      stroke-dashoffset: 0;
+    }
+}
+
+/* main {
+    width: 80%;
+} */
 
 main > section {
     display: flex;
     flex-wrap: wrap;
     padding: 0em 1em;
+    width: 80%;
+    margin: 0em auto;
 }
 
 article {
     position: relative;
     margin: 2em auto;
-    width: 30em;
-    background-color: var(--white);
+    width: 25em;
+    /* background-color: var(--white); */
     padding: 1em;
     display: inline-block;
     box-shadow: 10px 10px 16px -9px#484848;
 }
 
+main article {
+    background: linear-gradient(
+        to bottom,
+        var(--blue) 5%,
+        var(--white) 0%);
+    background-size: 100% 20px;
+}
+
 article img {
     width: 100%;
-    background-color: var(--brown);
+    background-color: var(--softPink);
 }
 
 article h2 {
     font-family: "Arial Black", Gadget, sans-serif;
     text-align: center;
-    color: var(--peach);
+    color: var(--pink);
     width: 80%;
     margin: 1em auto 0em auto;
     /* height: 3em; */
@@ -128,8 +246,12 @@ article p {
 }
 
 article p:first-of-type {
-    color: var(--brown);
+    color: var(--softPink);
     text-align: center;
+}
+
+article p:last-of-type {
+    height: 3.5em;
 }
 
 /* main section article > a {
@@ -151,7 +273,8 @@ div > a {
     padding: 1em;
 }
 
-a {
+/* aanpassen */
+main a {
     position: relative;
     margin: 0em auto;
     display: inline-block;
@@ -161,8 +284,8 @@ a {
     /* code from: https://css-tricks.com/having-fun-with-link-hover-effects/ */
     background:
     linear-gradient(
-    to bottom, var(--yellow) 0%,
-    var(--yellow) 100%
+    to bottom, var(--pink) 0%,
+    var(--pink) 100%
     );
     background-position: 0 100%;
     background-repeat: repeat-x;
@@ -170,11 +293,11 @@ a {
     transition: background-size .2s;
 }
 
-a:hover {
+main a:hover {
     background-size: 4px 50px;
 }
 
- a:focus {
+ main a:focus {
     background-size: 4px 50px;
 }
 
@@ -192,8 +315,8 @@ footer a {
     padding: 1em 0em;
     background:
     linear-gradient(
-    to bottom, var(--peach) 0%,
-    var(--peach) 100%
+    to bottom, var(--pink) 0%,
+    var(--pink) 100%
     );
     background-position: 0 100%;
     background-repeat: repeat-x;
