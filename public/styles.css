@@ -15,6 +15,9 @@
     --white: white;
 
     --blue: lightblue; 
+    --lightPink: lightpink;
+    --orange: coral;
+    --darkOrange: darkorange;
 }
 
 ::-webkit-scrollbar {
@@ -71,13 +74,13 @@ header > section {
     background-color: #fbecc6;
 }
 
-header > section > img {
+header section > img {
     position: absolute;
     width: 8em;
 
 }
 
-header > section > img:first-of-type {
+header section > img:first-of-type {
     top: -2em;
     left: -3em;
     transform: rotate(180deg);
@@ -85,16 +88,16 @@ header > section > img:first-of-type {
     -moz-transform: rotate(90deg);
 }
 
-header > section > img:last-of-type {
+header section > img:last-of-type {
     top: -2em;
     right: -3em;
 }
 
-header > section h1 {
+header section h1 {
     text-align: center;
 }
 
-header > section p {
+header section p {
     max-width: 25em;
     margin: 0 auto;
 }
@@ -141,7 +144,7 @@ header section > article {
     padding: 0.5em;
 }
 
-article span {
+header article span {
     background-image: url(/images/pinkWashiTape.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,7 +156,7 @@ article span {
     display: inline;
 }
 
-article a {
+header article a {
     position: relative;
     background-color: transparent;
     text-decoration: none;
@@ -162,7 +165,7 @@ article a {
     z-index: 3;
 }
 
-article span svg {
+header article span svg {
     position: absolute;
     z-index: 1;
     fill: none;
@@ -179,18 +182,18 @@ article span:nth-of-type(2) svg {
     margin: -5em 0em 0em -12em;
 } */
 
-article svg path {
+header article svg path {
     opacity: 0;
 }
 
-article a:hover + svg path{
+header article a:hover + svg path{
     opacity: 1;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
     animation: dash 1s ease-in forwards;
 }
 
-article a:focus + svg path{
+header article a:focus + svg path{
     opacity: 1;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
@@ -207,7 +210,7 @@ article a:focus + svg path{
     width: 80%;
 } */
 
-main > section {
+.home-page > section {
     display: flex;
     flex-wrap: wrap;
     padding: 0em 1em;
@@ -215,7 +218,7 @@ main > section {
     margin: 0em auto;
 }
 
-article {
+.home-page article {
     position: relative;
     margin: 2em auto;
     width: 25em;
@@ -225,7 +228,7 @@ article {
     box-shadow: 10px 10px 16px -9px#484848;
 }
 
-main article {
+.home-page article {
     background: linear-gradient(
         to bottom,
         var(--blue) 5%,
@@ -233,12 +236,12 @@ main article {
     background-size: 100% 20px;
 }
 
-article img {
+.home-page article img {
     width: 100%;
     background-color: var(--softPink);
 }
 
-article h2 {
+.home-page article h2 {
     font-family: "Arial Black", Gadget, sans-serif;
     text-align: center;
     color: var(--pink);
@@ -247,17 +250,17 @@ article h2 {
     /* height: 3em; */
 }
 
-article p {
+.home-page article p {
     width: 80%;
     margin: 1em auto 1em auto;
 }
 
-article p:first-of-type {
+.home-page article p:first-of-type {
     color: var(--softPink);
     text-align: center;
 }
 
-article p:last-of-type {
+.home-page article p:last-of-type {
     height: 3.5em;
 }
 
@@ -269,19 +272,19 @@ article p:last-of-type {
     padding: 1em;
 } */
 
-div {
+.home-page div {
     width: 85%;
     display: flex;
     flex-wrap: wrap;
     margin: 0em auto;
 }
 
-div > a {
+.home-page div > a {
     padding: 1em;
 }
 
 /* aanpassen */
-main a {
+.home-page a {
     position: relative;
     margin: 0em auto;
     display: inline-block;
@@ -300,11 +303,11 @@ main a {
     transition: background-size .2s;
 }
 
-main a:hover {
+.home-page a:hover {
     background-size: 4px 50px;
 }
 
- main a:focus {
+.home-page a:focus {
     background-size: 4px 50px;
 }
 
@@ -337,4 +340,76 @@ footer a:hover {
 
 footer a:focus {
     text-decoration: none;
+}
+
+.about-page section {
+    position: absolute;
+}
+
+.about-page article{
+    /* position: relative; */
+    /* background-color: violet; */
+    height: auto;
+    width: 70%;
+    height: 25em;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 0px 0px 10px 10px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.about-info-1 img {
+    margin-right: 2em;
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+    transform: rotate(3deg);
+    float: right;
+    margin: 0em 1em;
+    border: 10px solid white;
+}
+
+.about-info-1 article{
+    background-color: var(--lightPink);
+}
+
+.about-info-2 article{
+    background-color: var(--orange);
+}
+
+.about-info-3 article{
+    background-color: var(--darkOrange);
+}
+
+.about-page button{
+    font-size: 1em;
+    padding: 1em;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: -1.3em;
+}
+
+#button-info-1 {
+    /* margin-left: 8em; */
+    margin-top: -4.1em;
+    margin-left: -1em;
+    position: absolute;
+    background-color: var(--lightPink);
+    border: none;
+}
+
+#button-info-2 {
+    margin-top: -4.1em;
+    margin-left: 5.5em;
+    position: absolute;
+    background-color: var(--orange);
+    border: none;
+}
+
+#button-info-3 {
+    margin-top: -4.1em;
+    margin-left: 11.5em;
+    position: absolute;
+    background-color: var(--darkOrange);
+    border: none;
 }
