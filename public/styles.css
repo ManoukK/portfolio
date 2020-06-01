@@ -250,12 +250,13 @@ header article a:focus + svg path{
     color: var(--pink);
     width: 80%;
     margin: 1em auto 0em auto;
-    /* height: 3em; */
+    height: 3em;
 }
 
-.home-page article p {
+.home-page article p:last-of-type {
     width: 80%;
-    margin: 1em auto 1em auto;
+    margin: 1em auto 3em auto;
+    /* height: 4em; */
 }
 
 .home-page article p:first-of-type {
