@@ -15,6 +15,10 @@ app.get('/about', function(req, res){
     res.render('about')
 })
 
+app.get('/cv', function(req, res){
+    res.render('cv')
+})
+
 
 app.listen(port, host, function() {
     console.log(`Example app listening on port ${port}!`);
