@@ -1,0 +1,114 @@
+.cv-page article {
+    display: inline-block;
+    width: 23em;
+    /* height: 10em; */
+    background: linear-gradient(
+        to bottom,
+        var(--blue) 5%,
+        var(--white) 0%);
+    background-size: 100% 20px;
+    margin: 0.5em;
+}
+
+.cv-page article * {
+    position: relative;
+    text-align: center;
+}
+
+.cv-page article p:first-of-type {
+    display: inline-block;
+    width: 10em;
+    padding: 0.5em;
+    border-radius: 0px 10px 10px 0px;
+    z-index: 10;
+}
+
+.cv-page article p:nth-of-type(2) {
+    display: inline-block;
+    width: 6em;
+    padding: 0.5em 0.5em 0.5em 2em;
+    border-radius: 0px 10px 10px 0px;
+    margin-left: -2em;
+    z-index: 5;
+}
+
+.cv-page section:first-of-type article p:nth-of-type(1){
+    background-color: var(--softSoftPink);
+}
+
+.cv-page section:first-of-type article p:nth-of-type(2){
+    background-color: var(--ultrasoftPink);
+}
+
+.cv-page section:last-of-type article p:nth-of-type(1){
+    background-color: var(--gold);
+}
+
+.cv-page section:last-of-type article p:nth-of-type(2){
+    background-color: var(--goldlight);
+}
+
+
+.cv-page article p:nth-of-type(3){
+    margin-bottom: 2em;
+}
+
+.cv-page article h3 {
+    font-size: 1.5em;
+    /* background-image: url(/images/marker_line.png); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.cv-page section:first-of-type article h3 {
+    /* background-color: var(--lessSoftPink); */
+    background-image: url(images/pinkyMarker.png);
+}
+
+.cv-page section:last-of-type article h3 {
+    /* background-color: var(--golddark); */
+    background-image: url(images/goldMarker.png);
+}
+
+.cv-page > section {
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: 0em auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-page > h2 {
+    text-align: center;
+}
+
+.name {
+    display: block;
+    margin-top: 3em;
+}
+
+.name path {
+    stroke-dasharray: 500;
+    /* stroke-dashoffset: 10000; */
+    animation: dashdash 200s linear infinite;
+    stroke: var(--pink);
+    fill: white;
+    fill-opacity: 0.5;
+    stroke-width: 2px;
+}
+
+@keyframes dashdash {
+    from {
+        stroke-dashoffset: 20000;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+} 
+
+.name:hover path {
+    /* fill: white; */
+    fill-opacity: 1;
+}

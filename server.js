@@ -5,7 +5,7 @@ const port = process.env.PORT || 5000;
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
-app.use(express.static('public'));
+app.use(express.static('static'));
 
 app.get('/', function(req, res){
     res.render('main')

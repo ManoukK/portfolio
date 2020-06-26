@@ -1,0 +1,46 @@
+.about-page {
+    margin-top: 3em;
+}
+
+.about-page section {
+    /* position: absolute; */
+    margin-top: 3em;
+}
+
+
+.about-page article{
+    height: auto;
+    width: 70%;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 10px;
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+.about-info-1 img {
+    margin-right: 2em;
+    width: 15em;
+    height: 15em;
+    object-fit: cover;
+    transform: rotate(3deg);
+    float: right;
+    margin: 1em;
+    border: 10px solid white;
+}
+
+.about-info-1 article{
+    background-color: var(--lightPink);
+}
+
+.about-info-1 p, h2 {
+    margin: 1em;
+}
+
+.about-page h2 {
+    text-align: center;
+}
+
+.about-page h2:last-of-type {
+    margin-top: 3em;
+}
