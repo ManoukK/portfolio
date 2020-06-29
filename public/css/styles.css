@@ -251,7 +251,9 @@ header article a:focus + svg path{
     width: 100%;
     height: 13.5em;
     background-color: var(--softPink);
-    border: 5px solid lightblue;
+    outline: 5px solid lightblue;
+    text-align: center;
+    margin: 0em auto;
 }
 
 .home-page article h2 {
