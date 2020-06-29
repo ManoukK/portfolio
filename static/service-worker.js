@@ -1,6 +1,6 @@
 cacheName = 'v3'
 urlsToCache = [
-    '/css/index-d2f650d1a5.css',
+    '/css/index-279000827e.css',
     '/offline',
     '/images/papertexture2.png'
 ];
