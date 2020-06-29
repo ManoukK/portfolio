@@ -1,6 +1,15 @@
     <footer>
         <a href="https://github.com/ManoukK" target="_blank">Made by Manouk Kappé</a>
     </footer>
-    <script src="/js/index.js"></script>
+    <script>
+        if ('serviceWorker' in navigator){
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function(registration){
+                        return registration.update();
+                    })
+            });
+        }
+    </script>
 </body>
 </html>
