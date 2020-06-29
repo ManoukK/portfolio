@@ -265,34 +265,34 @@ header article a:focus + svg path{
     height: 3em;
 }
 
-.home-page article p:last-of-type {
+.home-page article > p:last-of-type {
     width: 80%;
     margin: 1em auto 3em auto;
     /* height: 4em; */
 }
 
-.home-page article p:first-of-type {
+.home-page article > p:first-of-type {
     color: var(--softPink);
     text-align: center;
 }
 
-.home-page article p:last-of-type {
+.home-page article > p:last-of-type {
     height: 3.5em;
 }
 
-.home-page div {
+.home-page article div:last-of-type {
     width: 85%;
     display: flex;
     flex-wrap: wrap;
     margin: 0em auto;
 }
 
-.home-page div > a {
+.home-page article div:last-of-type a {
     padding: 1em;
 }
 
 /* aanpassen */
-.home-page a {
+.home-page article div:last-of-type a {
     position: relative;
     margin: 0em auto;
     display: inline-block;
@@ -311,17 +311,50 @@ header article a:focus + svg path{
     transition: background-size .2s;
 }
 
-.home-page a:hover {
+.home-page article div:last-of-type a:hover {
     background-size: 4px 50px;
 }
 
-.home-page a:focus {
+.home-page article div:last-of-type a:focus {
     background-size: 4px 50px;
 }
 
+#GDA {
+    position: absolute;
+    background-color: lightcoral;
+    /* transform: rotate(45deg); */
+    /* right: -3em;
+    width: 10em; */
+    border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    right: -1em;
+    top: -1em;
+}
 
+#GDA img {
+    outline: none;
+    background-color: transparent;
+    width: 100px;
+    height: 100px;
+    transform: rotate(10deg);
+}
 
+#GDA img:hover {
+    animation: sticker 1s forwards;
+}
 
+#GDA img:focus {
+    animation: sticker 1s forwards;
+    outline: 5px solid lightblue;
+}
 
+@keyframes sticker {
+    0% {
+        transform: rotate(10deg) scale(1);
+    }
 
-
+    100% {
+        transform: rotate(0deg) scale(1.3);
+    }
+}
